@@ -5,12 +5,14 @@ import { AppComponent } from './app.component';
 
 import {HeaderComponet} from './components/header/header.component';
 import {BodyComponent} from './components/body/body.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponet,
-    BodyComponent
+    BodyComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule
