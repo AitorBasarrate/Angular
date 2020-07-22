@@ -9,7 +9,7 @@ export class BodyComponent{
     mostrar = true;
 
     frase: any = {
-        mensaje: 'Un gran poder conlleva una gran responsabilidad.',
+        mensaje: 'Targeta en el body',
         autor: 'Aitor Basarrate'
     }
 
