@@ -12,6 +12,7 @@ import { NavbarComponent } from './componentes/shared/navbar/navbar.component';
 import { HomeComponent } from './componentes/home/home.component';
 import { AboutComponent } from './componentes/about/about.component';
 import { HeroesComponent } from './componentes/heroes/heroes.component';
+import { HeroesService } from './servicios/heroes.service';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,9 @@ import { HeroesComponent } from './componentes/heroes/heroes.component';
     BrowserModule,
     APP_ROUTING
   ],
-  providers: [],
+  providers: [
+    HeroesService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
