@@ -8,27 +8,27 @@ import { APP_ROUTING } from "../../app.routes";
   templateUrl: './busqueda.component.html'
 })
 export class BusquedaComponent implements OnInit {
-
   heroe:any = {
 
-  }
+  };
+
+  heroes:any[] = [];
 
   constructor(private activatedRoute: ActivatedRoute,
     private _heroesService: HeroesService,
-    private router: Router) { 
+    private router: Router) { }
 
-this.activatedRoute.params.subscribe(params => {
-console.log(params['id']);
-this.heroe = this._heroesService.getHeroe(params['id']);
-});
-
-}
+ngOnInit(): void {
+    this.activatedRoute.params.subscribe(params => {
+      console.log(params['termino']);
+      this.heroe = this._heroesService.buscarHeroes(params['termino']);
+      });
+  }
 
 verHeroes(){
-this.router.navigate(['/heroes']);
+this.router.navigate(['/buscar/:termino']);
 }
 
-  ngOnInit(): void {
-  }
+  
 
 }
