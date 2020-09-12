@@ -21,6 +21,11 @@
           About
         </a>
       </li>
+      <li>
+        <a class="nav-link" [routerLink]="['about']" id="navbarAbout" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Contacto
+        </a>
+      </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Buscar heroe" (keyup.enter)="buscarHeroe(buscarTexto.value)" #buscarTexto>
